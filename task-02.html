@@ -7,19 +7,41 @@
     <title>Task 2</title>
     <link rel="stylesheet" href="css/common.css" />
     <style>
-      .item {
-        font-weight: 500;
+      .palette {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
       }
 
-      .item:not(:last-child) {
-        margin-bottom: 8px;
+      .color-card {
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .color-swatch {
+        height: 60%;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .color-meta {
+        margin: 10px;
+      }
+
+      p:first-child {
+        margin-bottom: 5px;
       }
     </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <ul id="ingredients"></ul>
+    <div class="palette js-palette"></div>
 
     <script src="js/task-02.js" type="module"></script>
   </body>

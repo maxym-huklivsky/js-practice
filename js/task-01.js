@@ -1,11 +1,34 @@
-// №1
-const categoriesEl = document.querySelector('#categories');
+const listEl = document.querySelector('.js-tags');
+const selectedTags = [];
 
-console.log(`Number of categories: ${categoriesEl.children.length}`);
+listEl.addEventListener('click', onFilter);
 
-// №2
-for (const children of categoriesEl.children) {
-  console.log(`Category: ${children.querySelector('h2').textContent}`);
+// First filter
+// function onFilter(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
 
-  console.log(`Elements: ${children.querySelectorAll('li').length}`);
+//   const currentActiveBtn = document.querySelector('.tags__btn--active');
+
+//   currentActiveBtn?.classList.remove('tags__btn--active');
+
+//   e.target.classList.add('tags__btn--active');
+// }
+
+// Second filter
+function onFilter(e) {
+  if (e.target.nodeName !== 'BUTTON') {
+    return;
+  }
+
+  e.target.classList.toggle('tags__btn--active');
+
+  if (e.target.classList.contains('tags__btn--active')) {
+    selectedTags.push(e.target.dataset.value);
+  } else {
+    selectedTags.splice(selectedTags.indexOf(e.target.dataset.value), 1);
+  }
+
+  console.log(selectedTags);
 }
