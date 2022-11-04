@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <p><a href="index.html">Go back</a></p>
 
-    <input type="text" id="name-input" placeholder="Please enter your name" />
-    <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    <label
+      >What do you search?
+      <input type="text" id="filter" />
+    </label>
+
+    <ul class="js-list"></ul>
 
     <script src="js/task-05.js" type="module"></script>
   </body>
