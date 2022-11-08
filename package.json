@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/maxym-huklivsky/js-practice/issues"
   },
-  "homepage": "https://github.com/maxym-huklivsky/js-practice#readme"
+  "homepage": "https://github.com/maxym-huklivsky/js-practice#readme",
+  "dependencies": {
+    "joi": "^17.7.0"
+  }
 }
