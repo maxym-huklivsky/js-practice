@@ -6,13 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 7</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      label:not(:last-child) {
+        display: block;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <input id="font-size-control" type="range" min="16" max="96" />
-    <br />
-    <span id="text">Abracadabra!</span>
+    <form>
+      <label>
+        Имя
+        <br />
+        <input type="text" name="name" />
+      </label>
+      <br />
+
+      <label>
+        Фамилия
+        <br />
+        <input type="text" name="surname" />
+      </label>
+      <br />
+
+      <label>
+        Отчество
+        <br />
+        <input type="text" name="otchestvo" />
+      </label>
+      <br />
+
+      <label>
+        Коментарий
+        <br />
+        <textarea name="comment" cols="30" rows="10"></textarea>
+      </label>
+      <br />
+
+      <button type="submit">Подтвердить</button>
+    </form>
 
     <script src="js/task-07.js" type="module"></script>
   </body>
